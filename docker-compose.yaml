@@ -1,0 +1,23 @@
+version: "2.1"
+services:
+  sqlite3:
+    build:
+      context: ./sqlite3
+    stdin_open: true
+    tty: true
+  events_api:
+      build:
+        context: ./events_api
+      restart: always
+      container_name: events_api
+      hostname: events_api
+      environment:
+        - gmail_uid=
+        - gmail_password=
+      ports:
+        - "8000:8000"
+      command: python3 main.py
+      depends_on:
+        - sqlite3
+      volumes:
+        - ./events_api:/events_api/:rw
