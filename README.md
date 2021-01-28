@@ -1,20 +1,21 @@
 # Pre - setup
 
-Make sure to download docker desktop
+1. Make sure to download docker desktop
 ```
 https://www.docker.com/products/docker-desktop
 ```
-Go to gmail security and enable app access
+2. Go to gmail security and enable app access
 ```
 https://myaccount.google.com/security
 enable less secure app access
 ```
-Setup your admin email: (modify docker-compose file)
+3. Setup your admin email: (modify docker-compose file)
 sample below:
 ```
 gmail_uid=myemail@gmail.com
 gmail_password=myp@ssword
 ```
+4. Make sure no proxy in your environment.
 
 # Building
 
